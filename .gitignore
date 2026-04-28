@@ -1,0 +1,37 @@
+# ── Python / Backend ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+.env
+*.log
+
+# ── Node / Frontend ──
+node_modules/
+frontend/dist/
+frontend/build/
+.vite/
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Docker ──
+*.log
+docker-compose.override.yml
+
+# ── Misc ──
+*.bak
+*.tmp
+.cache/

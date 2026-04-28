@@ -1,0 +1,111 @@
+.panel { margin-bottom: 2rem; }
+
+.inputWrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  border: none;
+  outline: none;
+  resize: vertical;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.hint { font-size: 12px; color: var(--text-muted); }
+
+.btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--text-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn:not(:disabled):hover { opacity: 0.85; }
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mic / voice button */
+.micBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.micBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.micActive {
+  border-color: #D85A30;
+  color: #D85A30;
+  box-shadow: 0 0 0 3px rgba(216, 90, 48, 0.12);
+}
+.micIcon { font-size: 14px; line-height: 1; }
+
+/* Pulsing red dot while listening */
+.pulse {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D85A30;
+  animation: pulseAnim 1s ease-in-out infinite;
+}
+@keyframes pulseAnim {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+}
+
+.examples { }
+.examplesLabel { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; display: block; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.pill {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  text-align: left;
+  transition: border-color 0.15s, color 0.15s;
+}
+.pill:hover { border-color: var(--accent); color: var(--accent); }
